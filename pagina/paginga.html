@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Proyecto Países</title>
+
+  <style>
+    body {
+      font-family: Arial;
+      background: #0f172a;
+      color: white;
+      text-align: center;
+    }
+
+    header {
+      background: #1e293b;
+      padding: 20px;
+    }
+
+    button {
+      margin: 5px;
+      padding: 10px;
+      border: none;
+      background: #38bdf8;
+      border-radius: 10px;
+      cursor: pointer;
+    }
+
+    section {
+      display: none;
+      padding: 30px;
+    }
+
+    .active {
+      display: block;
+    }
+
+    .boton {
+      display: inline-block;
+      margin: 15px;
+      padding: 12px;
+      background: red;
+      color: white;
+      text-decoration: none;
+      border-radius: 10px;
+      font-weight: bold;
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <h1> Proyecto 4 Países</h1>
+
+  <button onclick="mostrar('doc')">Documentos</button>
+  <button onclick="mostrar('videos')">Videos</button>
+  <button onclick="mostrar('analisis')">Análisis</button>
+  <button onclick="mostrar('texto')">Texto</button>
+</header>
+
+<!-- DOCUMENTOS -->
+<section id="doc" class="active">
+
+  <h2>Nigeria</h2>
+  <a href="./NIGERIA.docx" target="_blank" class="boton">
+     ABRIR 
+  </a>
+
+  <h2>Suiza</h2>
+  <a href="./SUIZA.docx" target="_blank" class="boton">
+     ABRIR
+  </a>
+
+</section>
+
+<!-- VIDEOS -->
+<section id="videos">
+  <h2>Videos</h2>
+  <p>liks...</p>
+</section>
+
+<!-- ANALISIS -->
+<section id="analisis">
+  <h2>Análisis General</h2>
+  <p>analisis</p>
+</section>
+
+<!-- TEXTO -->
+<section id="texto">
+  <h2>Texto por pais</h2>
+  <p>texto por pais </p>
+</section>
+
+<script>
+function mostrar(id) {
+  document.querySelectorAll("section").forEach(s => s.classList.remove("active"));
+  document.getElementById(id).classList.add("active");
+}
+</script>
+
+</body>
+</html>
